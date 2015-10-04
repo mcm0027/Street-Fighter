@@ -1,0 +1,21 @@
+body {
+	background-color: black;
+}
+
+#ryu-container {
+	background-color: white;
+	min-width: 1200px;
+	padding: 0;
+	margin-top: 6.9em;
+	position: relative;
+	float: left;
+	width: 100%;
+	padding-left: 6.2em;
+}
+
+.hadouken {
+	top:-320px;	
+	position: relative;
+	left: 460px;
+	margin-bottom: -94px;
+}

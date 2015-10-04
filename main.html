@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div id="ryu-container">
+			<div class="row">
+				<div class="ryu-img">
+					<div class="ryu-still">
+						<img src="images/ryu-standing-still.png">
+					</div>
+					<div class="ryu-ready">
+						<img src="images/ryu-ready-position.gif">
+					</div>
+					<div class="ryu-throwing">
+						<img src="images/ryu-throwing-hadouken.png">
+					</div>
+					<div class="ryu-cool">
+						<img src="images/ryu-cool.gif">
+					</div>
+					<div class="hadouken">
+						<img src="images/hadouken.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(".ryu-ready").hide();
+		$(".ryu-throwing").hide();
+		$(".hadouken").hide();
+		$(".ryu-cool").hide();
+
+		$("div.ryu-img")
+			.mouseenter(function() {
+				$("div.ryu-still").hide();
+				$(".ryu-ready").show();
+			});
+		$("div.ryu-img")
+		.mouseleave(function() {
+				$(".ryu-ready").hide();
+				$(".ryu-throwing").hide();
+				$(".ryu-cool").hide();
+				$(".ryu-still").show();
+			});
+
+		$("div.ryu-img")
+			.mousedown(function() {
+				$("div.ryu-still").hide();
+				$(".ryu-cool").hide();
+				$(".ryu-ready").hide();
+				$(".ryu-throwing").show();
+				$(".hadouken").show();
+				$( ".hadouken" ).animate({ "left": "+=800px" }, "slow" );
+			});
+		$("div.ryu-img")
+		.mouseup(function() {
+				$(".ryu-throwing").hide();
+				$(".ryu-cool").hide();
+				$(".ryu-ready").show();
+				$(".hadouken").hide();
+				$( ".hadouken" ).animate({ "left": "-=800px" }, "fast" );
+			});
+		$("div.ryu-img").keydown(function(e){
+			if(e.keyCode == 88){
+				$(".ryu-cool").show();
+				}
+		});
+
+
+
+
+
+		</script>
+</body>
+</html>
