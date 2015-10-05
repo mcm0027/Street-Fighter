@@ -19,3 +19,26 @@ body {
 	left: 460px;
 	margin-bottom: -94px;
 }
+
+.ryu-img {
+	width: 40%;
+	display: inline-block;
+	float: left;
+}
+
+.cool-text {
+	display: inline-block;
+	float: right;
+	width: 60%;
+}
+ 
+.cool-textright,
+.cool-textleft {
+	font-size: 2.5em;
+	font-family: 'Indie Flower', cursive;
+	padding-right: 30%;
+}
+
+.cool-textright {
+	text-align: right;
+}
